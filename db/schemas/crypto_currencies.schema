@@ -1,0 +1,7 @@
+# encoding: utf-8
+create_table :crypto_currencies, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4' do |t|
+  ## infomation
+  t.string   :name,   null: true, comment: '名前'
+  t.string   :address,   null: true, comment: 'アドレス'
+end
+# add_index :crypto_currencies, :email, unique: true
