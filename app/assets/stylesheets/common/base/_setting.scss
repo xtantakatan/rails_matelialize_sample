@@ -1,0 +1,22 @@
+@import "materialize";
+@import "materialize/components/color-variables";
+$primary-color: color("shades", "white") !default; //ラベルの背景色とか
+$secondary-color: $MAIN-COLOR !default;
+@import 'materialize';
+@import 'material_icons';
+
+/** Materialize Sticky Footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  height: auto !important;
+}
+
+.is-hidden {
+  display: none;
+}

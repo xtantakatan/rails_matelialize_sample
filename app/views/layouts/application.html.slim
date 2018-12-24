@@ -8,4 +8,35 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    nav
+      .nav-wrapper
+        a.brand-logo.center href="#!"
+          = "仮想通貨ウォレットアドレス トレース検証"
+        ul.left.hide-on-med-and-down
+          - if user_signed_in?
+            li
+              = link_to 'ウォレットアドレス登録', crypto_currencies_path
+
+          - else
+            li
+              = link_to 'アカウント登録', new_user_registration_path
+
+        - if user_signed_in?
+          ul.right.hide-on-med-and-down
+            li
+              a.dropdown-trigger data-target="dropdown-setting" href="#!"
+                | 設定
+                i.material-icons.right arrow_drop_down
+          ul#dropdown-setting.dropdown-content
+            li
+              = link_to 'プロフィール変更', edit_user_registration_path
+            li.divider
+            li
+              = link_to 'ログイン', new_user_session_path
+
+    .container
+      - if notice
+        p.notice= notice
+      - elsif alert
+        p.alert= alert
+      = yield

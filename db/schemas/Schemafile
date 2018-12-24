@@ -1,1 +1,2 @@
 require 'crypto_currencies.schema'
+require 'users.schema'

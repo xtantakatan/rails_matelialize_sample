@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
+gem 'jquery-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,6 +41,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'letter_opener'
+  gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
+  gem 'pry-doc'    # methodを表示
+  gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
+  gem 'pry-stack_explorer' # スタックをたどれる
+  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -65,3 +73,6 @@ gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'ridgepole'
 gem 'slim-rails'
+
+# Devise
+gem 'devise'
