@@ -75,4 +75,4 @@ gem 'ridgepole'
 gem 'slim-rails'
 
 # Devise
-gem 'devise'
+gem "devise", ">= 4.6.0"
